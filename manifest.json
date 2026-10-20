@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "NTULearn 字幕助手",
+  "version": "1.0.0",
+  "description": "为课程回放加载本地 SRT 字幕，调节字号、时间偏移和视频倍速。所有字幕仅在本机处理。",
+  "minimum_chrome_version": "119",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["https://*.ntu.edu.sg/*", "https://*.kaltura.com/*", "https://*.kaltura.net/*", "https://*.panopto.com/*", "https://*.panopto.eu/*"],
+  "action": {"default_title": "NTULearn 字幕助手", "default_popup": "popup.html"},
+  "content_scripts": [{
+    "matches": ["https://*.ntu.edu.sg/*", "https://*.kaltura.com/*", "https://*.kaltura.net/*", "https://*.panopto.com/*", "https://*.panopto.eu/*"],
+    "js": ["srt.js", "content.js"],
+    "all_frames": true,
+    "match_origin_as_fallback": true,
+    "run_at": "document_idle"
+  }]
+}

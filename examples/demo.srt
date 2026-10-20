@@ -1,0 +1,14 @@
+1
+00:00:00,000 --> 00:00:05,000
+欢迎使用 NTULearn 字幕助手
+Welcome to NTULearn Subtitle Helper
+
+2
+00:00:05,000 --> 00:00:10,000
+调整播放速度，字幕会跟随视频时间同步。
+Subtitles stay in sync with video playback speed.
+
+3
+00:00:10,000 --> 00:00:15,000
+试试拖动进度条、暂停或切换全屏。
+Try seeking, pausing, or entering fullscreen.

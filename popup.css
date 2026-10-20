@@ -1,0 +1,17 @@
+:root { color-scheme: light; font: 14px/1.5 "Segoe UI", "Microsoft YaHei", sans-serif; color: #17253d; background: #f4f7fc; }
+* { box-sizing: border-box; }
+body { width: 380px; margin: 0; padding: 22px; }
+header { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; }
+.logo { background: #2459da; color: white; border-radius: 12px; padding: 7px 13px; font-size: 24px; font-weight: 700; }
+h1 { font-size: 19px; margin: 0; } p { margin: 6px 0; } header p, .muted { color: #64748b; font-size: 12px; }
+.row { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 14px 0 8px; }
+select, input[type=number], button { font: inherit; padding: 7px 9px; border: 1px solid #cbd5e1; border-radius: 7px; background: white; color: inherit; }
+#video { width: 100%; } #encoding { max-width: 210px; font-size: 12px; } input[type=number] { width: 100px; }
+fieldset { border: 0; padding: 0; margin: 0; min-width: 0; } fieldset:disabled { opacity: .5; }
+.upload { display: flex; flex-direction: column; gap: 6px; padding: 18px 14px; border: 1px dashed #7fa0e8; border-radius: 10px; background: #eaf0ff; margin: 18px 0 10px; cursor: pointer; }
+.upload strong { color: #2459da; } .upload span { color: #64748b; font-size: 12px; } input[type=file] { max-width: 100%; font-size: 12px; }
+input[type=range] { width: 100%; accent-color: #2459da; } input[type=checkbox] { accent-color: #2459da; }
+button { cursor: pointer; } button:hover { background: #eaf0ff; } button:disabled { cursor: wait; } .secondary { font-size: 12px; }
+#filename { overflow-wrap: anywhere; } .toggle { display: flex; gap: 6px; align-items: center; }
+#status { padding: 10px 12px; background: #e9eef7; border-radius: 8px; font-size: 12px; overflow-wrap: anywhere; } #status.error { background: #fff0ee; color: #ac2e22; }
+footer { font-size: 11px; color: #64748b; margin-top: 14px; } :focus-visible { outline: 2px solid #2459da; outline-offset: 2px; }

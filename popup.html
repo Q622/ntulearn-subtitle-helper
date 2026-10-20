@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NTULearn 字幕助手</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <header><span class="logo">字</span><div><h1>NTULearn 字幕助手</h1><p>本地字幕 · 跟随视频同步</p></div></header>
+  <div class="row"><label for="video">目标视频</label><button id="refresh" class="secondary">重新检测</button></div>
+  <select id="video" aria-label="目标视频"></select>
+  <fieldset id="controls" disabled>
+    <label class="upload" for="file"><strong>选择本地 SRT 字幕</strong><span>文件仅在本机处理，最大 5 MB</span><input id="file" type="file" accept=".srt"></label>
+    <div class="row"><label for="encoding">文件编码</label><select id="encoding"><option value="auto">自动（UTF-8 / UTF-16）</option><option value="gb18030">GB18030 / GBK</option><option value="utf-8">UTF-8</option><option value="utf-16le">UTF-16 LE</option><option value="utf-16be">UTF-16 BE</option></select></div>
+    <p id="filename" class="muted">尚未加载字幕</p>
+    <div class="row"><label for="size">字幕大小</label><output id="sizeValue">26 px</output></div>
+    <input id="size" type="range" min="12" max="72" value="26">
+    <div class="row"><label for="rate">播放速度</label><select id="rate"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="0.75">0.75×</option><option value="1" selected>1× 正常</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option><option value="1.75">1.75×</option><option value="2">2×</option><option value="2.5">2.5×</option><option value="3">3×</option><option value="4">4×</option></select></div>
+    <div class="row"><label for="offset">字幕时间偏移（秒）</label><input id="offset" type="number" min="-3600" max="3600" step="0.1" value="0"></div>
+    <p class="muted">正数：字幕晚出现；负数：字幕提前。</p>
+    <div class="row"><label class="toggle"><input id="enabled" type="checkbox" checked>显示字幕</label><button id="clear" class="secondary">清除字幕</button></div>
+  </fieldset>
+  <p id="status" role="status" aria-live="polite">正在检测视频…</p>
+  <footer>先打开课程回放并开始播放。多画面回放可选择字幕显示在哪个视频上。刷新课程页面后需重新导入字幕。</footer>
+  <script src="popup.js"></script>
+</body></html>

@@ -1,0 +1,22 @@
+# Local editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local credentials and configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.aws/
+.codex/
+.agents/
+
+# Generated packages and dependencies
+*.zip
+node_modules/
+coverage/
+*.log
